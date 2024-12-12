@@ -1,0 +1,413 @@
+/* Enable smooth scrolling on the page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic reset for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}/* Remove padding and margin from body and html to prevent spacing around the image */
+body, html {
+    margin: 50;
+    padding: 20;
+    box-sizing: border-box;
+    height: 100%;  /* Ensure full page height is used */
+}
+
+/* Home Section */
+.cover {
+    position: relative;
+    font-size: 10px;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0; /* Ensure no margin on the cover section */
+}
+
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EEE1D8; /* Replace with your desired color code */
+    filter: none; /* Remove the blur filter */
+    z-index: -1; /* Ensure the background stays behind the content */
+}
+
+
+/* Cover section */
+.cover {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0; /* Ensure no margin on the cover section */
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffc398; /* Replace with your desired color code */
+    filter: none; /* Remove the blur filter */
+    z-index: -1; /* Ensure the background stays behind the content */
+}
+
+
+
+/* Remove any margin or padding from header */
+header {
+    margin: 50;
+    padding: 50;
+}
+
+/* Navigation styling */
+header nav {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1;
+    margin: 0; /* Ensure no margin on the navigation */
+    padding: 0;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Text overlay styling */
+.cover-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.cover-text p {
+    font-size: 1.5rem;
+}
+
+
+
+.categories-section .categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    padding: 20px;
+    margin: 0 auto; /* Center the container */
+}
+
+.categories-section .category-box {
+    background-color: #7E614D;
+    color: white;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.categories-section .category-box:hover {
+    background-color: #b86630;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+.categories-section .category-box:active {
+    background-color: #b86630;
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.categories-section .category-box:focus {
+    outline: 3px solid #f39c12;
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    .categories-section .categories-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        gap: 15px;
+    }
+
+    .categories-section .category-box {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+
+
+next
+
+
+/* General styling for the name list */
+.name-list {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Can be removed for sharp edges */
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Individual list item styling */
+.name-list-item {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Highlight the last item to remove border */
+.name-list-item:last-child {
+    border-bottom: none;
+}
+
+/* Styling for hover effect */
+.name-list-item:hover {
+    background-color: #f5f5f5;
+}
+
+/* Name, address, number, and ratings styling */
+.name-item {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.address-item,
+.number-item,
+.ratings-item {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+/* Styling for the pop-up button */
+.hire-button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.hire-button:hover {
+    background-color: #2980b9;
+}
+
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Container for the list */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Each person box styling */
+.person-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.person-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Inside each person box */
+.person-info {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Popup modal styling */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Close button inside the popup */
+.popup-close {
+    display: block;
+    text-align: right;
+    margin-top: -10px;
+    margin-right: -10px;
+}
+
+.popup-close button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    padding: 5px 10px;
+    transition: color 0.2s ease;
+}
+
+.popup-close button:hover {
+    color: red;
+}
+
+/* Hire button inside popup */
+.hire-button {
+    display: block;
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hire-button:hover {
+    background-color: #218838;
+}
+
+
+#category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+.category-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.category-box:hover {
+    transform: scale(1.05);
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#popup h2, #popup p {
+    margin: 50px 0;
+}
+
+#hire-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hire-button:hover {
+    background-color: #218838;
+}
